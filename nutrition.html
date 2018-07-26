@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="jquery.downCount.js"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="nutri.js"></script>
+  </head>
+  <body>
+    Columns used in the survey file:<br>
+    <input type="checkbox" id="ch2"  onclick="myFunction('ch',2)">Gender <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="dat20"  onclick="myFunction('dat',20)">Male
+                      <input type="checkbox" id="dat21"  onclick="myFunction('dat',21)">Female <br>
+    <input type="checkbox" id="ch3"  onclick="myFunction('ch',3)">Age <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="dat30"  onclick="myFunction('dat',30)">Below 24.
+                      <input type="checkbox" id="dat31"  onclick="myFunction('dat',31)">25 to 29 years
+                      <input type="checkbox" id="dat32"  onclick="myFunction('dat',32)">30 to 34 years
+                      <input type="checkbox" id="dat33"  onclick="myFunction('dat',34)">35 to 40 years
+                      <input type="checkbox" id="dat34"  onclick="myFunction('dat',34)">40 + years <br>
+    <input type="checkbox" id="ch4"  onclick="myFunction('ch',4)">How often do you think about your health?<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="dat40"  onclick="myFunction('dat',40)">Very Often
+                      <input type="checkbox" id="dat41"  onclick="myFunction('dat',41)">Sometimes
+                      <input type="checkbox" id="dat42"  onclick="myFunction('dat',42)">Rarely
+                      <input type="checkbox" id="dat43"  onclick="myFunction('dat',43)">Never <br>
+    <input type="checkbox" id="ch5"  onclick="myFunction('ch',5)">Do you have any specific health goals?<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="dat50"  onclick="myFunction('dat',50)">Yes
+                      <input type="checkbox" id="dat51"  onclick="myFunction('dat',51)">No <br>
+    <input type="checkbox" id="ch10"  onclick="myFunction('ch',10)">Do you have any nutritional deficiencies? <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="dat100"  onclick="myFunction('dat',100)">Yes
+                      <input type="checkbox" id="dat101"  onclick="myFunction('dat',101)">No <br>
+    <input type="checkbox" id="ch12"  onclick="myFunction('ch',12)">Do you consume any of the following ?<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="dat120"  onclick="myFunction('dat',120)">Meat
+                      <input type="checkbox" id="dat121"  onclick="myFunction('dat',121)">Dairy Products
+                      <input type="checkbox" id="dat122"  onclick="myFunction('dat',122)">None <br>
+    <input type="checkbox" id="ch13"  onclick="myFunction('ch',13)">Do you take any nutritional supplements (For example: Multivitamins, Biotin, Mineral supplements, etc.)?<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="dat130"  onclick="myFunction('dat',130)">Yes
+                      <input type="checkbox" id="dat131"  onclick="myFunction('dat',131)">No <br>
+    <input type="checkbox" id="ch14"  onclick="myFunction('ch',14)">How did you come to know about these supplements?<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="dat140"  onclick="myFunction('dat',140)">Doctor
+                      <input type="checkbox" id="dat141"  onclick="myFunction('dat',141)">Online
+                      <input type="checkbox" id="dat142"  onclick="myFunction('dat',142)">Referral
+                      <input type="checkbox" id="dat143"  onclick="myFunction('dat',143)">Nutritionist <br>
+    <input type="checkbox" id="ch15"  onclick="myFunction('ch',15)">Do you take supplements through the year or intermittently?<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="dat150"  onclick="myFunction('dat',150)">Always
+                      <input type="checkbox" id="dat151"  onclick="myFunction('dat',151)">Intermittently <br>
+    <input type="checkbox" id="ch17"  onclick="myFunction('ch',17)">Where do you purchase your supplements from?<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="dat170"  onclick="myFunction('dat',170)">Offline Store(Medplus, Chemist, etc)
+                      <input type="checkbox" id="dat171"  onclick="myFunction('dat',171)">Online Store(Amazon, etc)
+                      <input type="checkbox" id="dat172"  onclick="myFunction('dat',172)">Nutritionist/Doctor Samples <br>
+    <input type="checkbox" id="ch18"  onclick="myFunction('ch',18)">What is important for you when you purchase the supplements?<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="dat180"  onclick="myFunction('dat',180)">Quality
+                      <input type="checkbox" id="dat181"  onclick="myFunction('dat',181)">Price
+                      <input type="checkbox" id="dat182"  onclick="myFunction('dat',182)">Brand
+                      <input type="checkbox" id="dat182"  onclick="myFunction('dat',183)">Accessibility
+                      <input type="checkbox" id="dat182"  onclick="myFunction('dat',184)">Doctor/Nutritionist Recommended <br>
+    <input type="checkbox" id="ch19"  onclick="myFunction('ch',19)">What types of supplements do you prefer?<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="dat190"  onclick="myFunction('dat',190)">Ayurvedic
+                      <input type="checkbox" id="dat191"  onclick="myFunction('dat',191)">Non-Ayurvedic
+                      <input type="checkbox" id="dat192"  onclick="myFunction('dat',192)">Anything <br>
+    <input type="checkbox" id="ch20"  onclick="myFunction('ch',20)">On a scale of 1-10, how likely are you to undertake a brand switch from your current supplements?<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="dat200"  onclick="myFunction('dat',200)">1
+                      <input type="checkbox" id="dat201"  onclick="myFunction('dat',201)">2
+                      <input type="checkbox" id="dat202"  onclick="myFunction('dat',202)">3
+                      <input type="checkbox" id="dat203"  onclick="myFunction('dat',203)">4
+                      <input type="checkbox" id="dat204"  onclick="myFunction('dat',204)">5
+                      <input type="checkbox" id="dat205"  onclick="myFunction('dat',205)">6
+                      <input type="checkbox" id="dat206"  onclick="myFunction('dat',206)">7
+                      <input type="checkbox" id="dat207"  onclick="myFunction('dat',207)">8
+                      <input type="checkbox" id="dat208"  onclick="myFunction('dat',208)">9
+                      <input type="checkbox" id="dat209"  onclick="myFunction('dat',209)">10 <br>
+    <input type="checkbox" id="ch24"  onclick="myFunction('ch',24)">How would you rate your health/appearance in comparison to people of your age group on a scale of 1 to 5?<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="dat240"  onclick="myFunction('dat',240)">1
+                      <input type="checkbox" id="dat241"  onclick="myFunction('dat',241)">2
+                      <input type="checkbox" id="dat242"  onclick="myFunction('dat',242)">3
+                      <input type="checkbox" id="dat243"  onclick="myFunction('dat',243)">4
+                      <input type="checkbox" id="dat244"  onclick="myFunction('dat',244)">5 <br>
+    <input type="checkbox" id="ch26"  onclick="myFunction('ch',26)">Are you interested in consuming nutritional supplements in the future?<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="dat260"  onclick="myFunction('dat',260)">1
+                      <input type="checkbox" id="dat261"  onclick="myFunction('dat',261)">2
+                      <input type="checkbox" id="dat262"  onclick="myFunction('dat',262)">3
+                      <input type="checkbox" id="dat263"  onclick="myFunction('dat',263)">4
+                      <input type="checkbox" id="dat264"  onclick="myFunction('dat',264)">5 <br>
+    <br><br><br> <button type="submit" value="nutrition" onclick="Showchart()">Show chart</button>
+    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
